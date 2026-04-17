@@ -258,10 +258,101 @@ print("%s님의 생년월일은 %d/%02d/%02d입니다."%(name,year,month,day))
 ##    print("당신의 회원 등급은 우수회원입니다.")
 
 
-num=input("정수를 입력하세요:")
-if int(num)%2==0:
-    print("짝수입니다.")
-if int(num)%2!=0: #else:
-    print("홀수입니다.")
+##num=input("정수를 입력하세요:")
+##if int(num)%2==0:
+##    print("짝수입니다.")
+##if int(num)%2!=0: #else:
+##    print("홀수입니다.")
 
-          
+#260417
+#조건문 : 조건에 따른 선택, 비교연산자, 논리연산자
+##n1=int(input())
+##n2=int(input())
+##if n1==n2:
+##    print('같습니다.')
+##elif n1>n2:
+##    print(str(n1)+'이 큽니다.')
+##else:
+##    print(str(n2)+'이 큽니다.')
+
+##
+##num=int(input("숫자를 입력하세요:"))
+##if num%15==0:
+##    print("3의 배수이면서 5의 배수입니다.")
+##elif num%5==0:
+##    print("5의 배수입니다.")
+##elif num%3==0:
+##    print("3의 배수입니다.")
+##else:
+##    print("3의 배수도 5의 배수도 아닙니다.")
+##    
+
+
+##num=int(input("정수를 입력하세요:"))
+##if num>0:
+##    if 1<num<100:
+##        print("1에서 100사이의 정수입니다.")
+##    else:
+##        print("100보다 큰 정수입니다.")
+##elif num==0:
+##    print("0입니다.")
+##else:
+##    print("음수입니다.")
+
+#반복문 for while 조건식
+##while true: #무한반복
+##    print('hi')
+
+##while True: #1번 반복문
+##    print('hi')
+##    break
+##print()
+##while True: #3번 반복문
+##    print('hi')
+##    print('hi')
+##    print('hi')
+##    break
+##
+##print()
+##i=1
+##while True:
+##    if i>100:
+##        break
+##    print(i,'hi')
+##    i+=1 # = i+1
+##print()
+##
+##i=1
+##while i<=100: # or i<101 
+##    print(f'{i:03d}hi')
+##    i+=1 # = i+1
+
+
+print()
+i=1
+while i<=10: #1~10 사이 짝수출력하기
+    if i%2==0:
+        print(i,end=" ")
+    i+=1
+print()
+
+i=1
+while i<=10:
+    if i%2==1:
+        i+=1
+        continue
+    print(i,end=" ")
+    i+=1
+print()
+i=1
+while i<=10:
+    print(i,end=" ")
+    i+=2
+    
+print()
+
+i=1
+n=int(input("출력할 마지막 숫자를 입력하세요:"))
+while i<=n:
+    print(i,end=" ")
+    i+=1
