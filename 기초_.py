@@ -523,15 +523,21 @@ for i in(1,2,3,4,5):
 ##    else:
 ##        print(i,end="")
 
-sentence=input('영어 문장을 입력하세요:')
-count=0
-print("모음:",end="")
-for i in sentence:
-    if i=="a" or i=="e" or  i=="i" or i=="o" or i=="u":
-        count=count+1
-        print(i,end="")
-print()
-print('모음의 개수:%d'%count)
-        
-        
+##sentence=input('영어 문장을 입력하세요:')
+##count=0
+##print("모음:",end="")
+##for i in sentence:
+##    if i=="a" or i=="e" or  i=="i" or i=="o" or i=="u":
+##        count=count+1
+##        print(i,end="")
+##print()
+##print('모음의 개수:%d'%count)
+##        
+##        
+
+for i in range(100):
+    if i %10 != 4 :  #if i %10 ==4: print(i,end=' ')
+        continue
+    print(i,end=" ")
+
     
