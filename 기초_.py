@@ -328,31 +328,185 @@ print("%s님의 생년월일은 %d/%02d/%02d입니다."%(name,year,month,day))
 ##    i+=1 # = i+1
 
 
-print()
-i=1
-while i<=10: #1~10 사이 짝수출력하기
-    if i%2==0:
-        print(i,end=" ")
-    i+=1
-print()
+##print()
+##i=1
+##while i<=10: #1~10 사이 짝수출력하기
+##    if i%2==0:
+##        print(i,end=" ")
+##    i+=1
+##print()
+##
+##i=1
+##while i<=10:
+##    if i%2==1:
+##        i+=1
+##        continue
+##    print(i,end=" ")
+##    i+=1
+##print()
+##i=1
+##while i<=10:
+##    print(i,end=" ")
+##    i+=2
+##    
+##print()
+##
+##i=1
+##n=int(input("출력할 마지막 숫자를 입력하세요:"))
+##while i<=n:
+##    print(i,end=" ")
+##    i+=1
 
-i=1
-while i<=10:
-    if i%2==1:
-        i+=1
-        continue
-    print(i,end=" ")
-    i+=1
-print()
-i=1
-while i<=10:
-    print(i,end=" ")
-    i+=2
-    
-print()
+#240424
+#for: 가지고 있는 횟수 만큼 반복
+#숫자의 범위
+for i in(1,2,3,4,5):
+    print(i)
 
-i=1
-n=int(input("출력할 마지막 숫자를 입력하세요:"))
-while i<=n:
-    print(i,end=" ")
-    i+=1
+#range(시작,끝+1,간격)->'1'은 생략 가능
+##for i in range(1,101,2)
+##    print(i,end=' ')
+##print()
+##
+##for i in range(5,0,-1):
+##    print(i,end=' ')
+##print()
+##
+##for i in range(3):
+##    print('^^')
+##print()
+##
+##str5='xxzzrr'
+##for i in range(len(str5)):#0~5
+##    print(str5[i],end='')#값 출력 
+
+##for i in range(10):
+##    print('안녕하세요?')
+##
+##for i in range(1,100,2):
+##    print(i,end=" ")
+##
+##print()
+##
+##for i in range(0,101,5):
+##    print(i,end=" ")
+##
+##print()
+##
+##for i in range(0,101):
+##    if i%5==0:
+##        print(i,end=" ")
+
+##sum=0
+##for i in range(1,11):
+##    sum=sum+i
+##print("1~10의 합계:%d"%sum)
+
+##for i in range(1,11):
+##    print(" "*(10-i),end="")
+##    print("*"*i,end="")
+##    print()
+
+##for i in range(5):
+##    for j in range(10):
+##        print('*',end=' ')
+##    print()
+
+##sum=0
+##for i in range(1,101):
+##    if i%2==0:
+##        sum=sum+i
+##print(f'1~100 사이 짝수의 합계:{sum}')
+##
+##sum=0
+##count=0
+##for i in range(101):
+##    if i%3==0:
+##        sum=sum+i
+##        print('%04d'%sum,end=" ")
+##        count=count+1
+##
+##        if count%10==0:
+##            print()
+##print('0부터 100사이의 3의 배수의 합은 %04d입니다.'%sum)
+
+##for i in range(5):
+##    print('*')
+##for i in range(5):
+##    print('*',end="")
+
+##for i in range(5):
+##    for j in range(5):
+##        print('*',end="")
+##    print()
+
+##for i in range(1,6):
+##    print((6-i)*"",end="")
+##    print(i*"*",end="")
+##    print()
+
+##for i in range(5,0,-1):
+##    print(i*"*",end="")
+##    print((6-i)*"",end="")
+##    print()
+##
+##dallarR=int(input('오늘의 원/달러 환율을입력하세요:'))
+##yenR=int(input('오늘의 100엔 당 원/엔 환율을 입력하세요:'))
+##print('-'*40)
+##print("%8s %8s %8s"%("원","달러","엔"))
+##print('-'*40)
+##won=10000
+##while won<=100000:
+##    dollar=won/dallarR
+##    yen=won/yenR*100
+##    print('%8d %10.2f %10d'%(won,dollar,yen))
+##    won=won+10000
+##print("-"*40)
+
+
+#260427
+##for i in range(5,0,-1):
+##    print((6-i)*" ",end="")
+##    print(i*"*",end="")
+##    print()
+
+##for i in range(5):    p.15
+##    for j in range(5):
+##        if i > j:
+##            print(" ",end="")
+##        else:
+##            print("*",end="")
+##    print()
+##
+
+##key=input('문장을 넣으세요:')
+##for i in key:
+##    print(i, end=" ")
+
+##number=input('-가 포함된 전화번호를 입력하세요:')
+##for i in number:
+##    if i=="-":
+##        print("/",end="")
+##    else:
+##        print(i,end="")
+
+##number=input('전화번호를 숫자만 입력하세요:')
+##phone=""
+##for i in range(0,len(number)):
+##    if i ==2:
+##        phone=phone+(number[2]+"-")
+##    elif i ==6:
+##        phone=phone+(number[6]+"-")
+##    else:
+##        phone=phone+number[i]
+##print('당신의 전화번호는 %s입니다.'%(phone))
+
+day=input('생일을 12/15형식으로 입력하세요:')
+print("당신의 생일은 ",end="")
+
+for i in day:
+    if i =="/":
+      print("월 ",end="")
+    else:
+        print(i, end="")
+print("일입니다.")
