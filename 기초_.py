@@ -501,12 +501,37 @@ for i in(1,2,3,4,5):
 ##        phone=phone+number[i]
 ##print('당신의 전화번호는 %s입니다.'%(phone))
 
-day=input('생일을 12/15형식으로 입력하세요:')
-print("당신의 생일은 ",end="")
+##day=input('생일을 12/15형식으로 입력하세요:')
+##print("당신의 생일은 ",end="")
+##
+##for i in day:
+##    if i =="/":
+##      print("월 ",end="")
+##    else:
+##        print(i, end="")
+##print("일입니다.")
 
-for i in day:
-    if i =="/":
-      print("월 ",end="")
-    else:
-        print(i, end="")
-print("일입니다.")
+##for i in range(4):
+##    for j in range(4):
+##        print(i+j,end="")
+##    print()
+
+##furuit=input('좋아하는 과일을 입력하세요:')
+##for i in furuit:
+##    if i ==" ":
+##        print("/",end="")
+##    else:
+##        print(i,end="")
+
+sentence=input('영어 문장을 입력하세요:')
+count=0
+print("모음:",end="")
+for i in sentence:
+    if i=="a" or i=="e" or  i=="i" or i=="o" or i=="u":
+        count=count+1
+        print(i,end="")
+print()
+print('모음의 개수:%d'%count)
+        
+        
+    
