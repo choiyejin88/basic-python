@@ -540,4 +540,50 @@ for i in range(100):
         continue
     print(i,end=" ")
 
+print()
+#260429
+#packing,리스트(list)
+num=[100,200,452,7,3,6]
+a,b,c,d,e,f=num # unpacking
+print(num)
+print(num[2])
+print(num[1:4])#1~3
+print(num[::2])#시작과 끝 생략 가능, 간격 작성 가능
+print(num[::-1])#역순도 가능
+
+#bit(binary digit),byte
+
+print(len(num))
+
+n=[0,0]
+print(num+n) #연결연산자
+print(n*2) #반복연산자
+n2=[0]*3 #반복연산자
+print(n2)
+
+tot=0
+for i in num: #sum(num)
+    tot +=i
+print(tot)
+
+tot=0
+for i in range(len(num)):
+    tot+=num[i]
+print(f'합계는 {tot}')
     
+colors=['빨간색','파란색','노란색','검정색','초록색']
+for color in colors:
+    print(f'나는 {color}을 좋아합니다.') 
+
+
+animal=['강아지','호랑이','사슴','고양이']
+i=0
+while i< len(animal):
+    print(f'내가 좋아하는 동물:{animal[i]}')
+    i+=1
+
+for i in animal:
+    print(f'내가 좋아하는 동물:{i}')
+
+
+
