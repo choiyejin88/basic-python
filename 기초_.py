@@ -534,7 +534,7 @@ for i in(1,2,3,4,5):
 ##print('모음의 개수:%d'%count)
 ##        
 ##        
-
+'''
 for i in range(100):
     if i %10 != 4 :  #if i %10 ==4: print(i,end=' ')
         continue
@@ -584,6 +584,127 @@ while i< len(animal):
 
 for i in animal:
     print(f'내가 좋아하는 동물:{i}')
+
+#260430
+fruits=['사과','바나나']
+fruits.append('망고') #추가 마지막으로
+print(fruits)
+
+fruits.insert(1,'포도') #삽입
+print(fruits)
+
+fruits[0]='배' #수정
+print(fruits)
+
+del fruits[0] #위치값으로 삭제
+#del fruits[1:3]
+print(fruits)
+
+fruits.pop()  # 위치 안적으면 '마지막 삭제'
+print(fruits)
+
+fruits.pop(1) #위치값으로 삭제
+print(fruits)
+
+fruits.clear() #모두 삭제
+print(fruits)
+
+list=['사과','바나나','포도','오렌지']
+print(list)
+list.append('딸기')
+print(list)
+list.insert(1,'수박')
+print(list)
+list[3]='복숭아'
+print(list)
+list.pop(2)
+print(list)
+del list[2]
+print(list)
+print()
+
+animal=['강아지','고양이','사자','호랑이','토끼','거북']
+del animal[2:4]
+print (animal)
+animal.pop(1)
+print (animal)
+animal.pop()
+print (animal)
+animal.clear()
+print (animal)
+print()
+'''
+'''
+num=list(range(5,51,5))
+print(num)
+
+#컴프이헨션 : 반복문과 조건문으로 리스트 만들기
+alist = [i for i in range(5)]
+print(alist)
+
+blist = [i*3 for i in range(5)]
+print(blist)
+
+clist = [0 for i in range(5)] #[0]*5
+print(blist)
+
+clist = [0 for _ in range(5)] #[0]*5, '_ '언더 바는 생략기호
+print(clist)
+
+dlist = [r for r in range(6) if r%2==1 ]
+print(dlist)
+
+elist = [chr(ord('a')+i) for i in range(3)]
+#10진수로 97, 아스키코드번호 
+print(elist)
+
+for a,b in zip(dlist,elist):
+    print(str(a)+b)
+
+#enumerate() 리스트 한개에서 인덱스와 값을 가져온다.
+for idx, value in enumerate(elist):
+    print(idx,value)
+
+flist=[8,1,2,9,6] #숫자, 문자, 알파벳
+print(flist)
+flist.reverse() #역순  flist[::-1]
+print(flist)
+flist.sort() #오름차순 정렬
+print(flist)
+flist.sort(reverse=True) #내림차순 정렬
+print(flist)
+'''
+
+ 
+num22=[[1,2,3],[4,5,6],[7,8,9]]
+print(num22[0][1])
+print()
+for i in num22:  #행
+    for j in i:  #행의 열값
+        print(j,end=" ")
+    print()
+
+print()
+
+for i in range(len(num22)):
+    for j in range(len(num22[i])):
+        print(num22[i][j],end=" ")
+    print()
+
+foods=[['김치찌개','비빕밥','불고기','설렁탕'],['스테이크','파스타','피자']]
+for i in range(len(foods)):
+    for j in range(len(foods[i])):
+                   print(foods[i][j],end=' ')
+    print()
+
+
+scores=[[75,83,90],[86,86,73],[76,95,83],[89,96,69],[89,76,93]]
+for i in range(len(scores)):
+    sum=0
+    for j in range(len(scores[i])): #0~2
+        sum=sum+scores[i][j]
+    avg=sum/len(scores[i])
+    print('%d번 학생의 총점:%d,평균:%.2f'%(i+1,sum,avg))
 
 
 
