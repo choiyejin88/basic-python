@@ -673,9 +673,7 @@ flist.sort() #오름차순 정렬
 print(flist)
 flist.sort(reverse=True) #내림차순 정렬
 print(flist)
-'''
 
- 
 num22=[[1,2,3],[4,5,6],[7,8,9]]
 print(num22[0][1])
 print()
@@ -705,6 +703,89 @@ for i in range(len(scores)):
         sum=sum+scores[i][j]
     avg=sum/len(scores[i])
     print('%d번 학생의 총점:%d,평균:%.2f'%(i+1,sum,avg))
+'''
+#20260505
+# a=[12, 45,23]-> b,c,d=a 언팩킹
+a=(3,) #값이 하나일 땐 , 쉼표가 필수
+#요소 수정, 추가, (부분)삭제 = 보존될 데이터
+print(type(a))
+
+b=(b,'ab',56,7,True,6) # 중복값 가능
+
+print(b)
+print(b[2])
+print(a+b) #연결
+print(a*3)#반복
+del a #전체삭제
+##print(a)
+
+c=[9,8,7]
+c=tuple(c)
+print(c)
+
+#딕셔너리
+#8권 6p
+foods=('피자','파스타','돈까스','떡볶이','김밥','순대')
+print(foods[0])
+print(foods[3])
+print(foods[1:4])
+
+print(len(foods))
+
+for x in foods:
+    print(x,end=" ")
+print()
+#del foods
+#print(foods)
+
+info=('-관리자 정보-','아이디:admin','비밀번호:12345','이메일:webmaster@naver.com')
+for i in info:
+    print(i,end='\n')
+print()
+
+
+dans=(2,3,4,5,5,6,7,8,9)
+print('='*50)
+print('구구단표')
+print('='*50)
+for i in dans:
+    print(i,'단')
+    for j in dans:
+        print('%d x %d = %d'%(i,j,i*j))
+    print('-'*30)
+
+#딕셔너리 : { },dict( )
+#key:value 쌍으로
+d1={'a-100':'예진','c-5':'나진'}
+print(d1)
+print(d1['a-100'])
+d1['c-5']='수진' #수정
+d1['d-77']='예진' #추가
+print(d1)
+del d1['a-100'] #삭제
+print(d1)
+print()
+
+for i in d1:
+    print(i,d1[i]) # key value
+
+#key 값은 중복이 안되기만 value 값은 중복이 가능 **
+    
+print(d1.items()) #키 값 모두
+print(d1.values()) # 값 만
+print(d1.keys()) # 키 값만
+
+print(len(d1))
+
+mem={'name':'강수찬','age':14,'email':'suchan@korea.com'}
+for i in mem:
+    print(i,mem[i],sep=": ")
+
+mem['age']=17
+print(mem['age'])
+        
+  
+
 
 
 
