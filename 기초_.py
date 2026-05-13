@@ -784,8 +784,106 @@ for i in mem:
 mem['age']=17
 print(mem['age'])
         
-  
 
 
+#260513
+s1={6,9,7} # 집합 set, index가 없다. 중복 안됨
+#
+print(type(s1))
+# set () 면 집합이 된다. 
+java={'유재석','양세형','하하'}
+python={'유재석','박명수'}
+print(java&python) #교집합, java.interaction(python)
+print(java-python) #차집합, java.union(python)
+print(java | python) # 합집합, java.difference(python)
+
+#요소 항목 추가 수정 삭제 가능
+java.add('정준하')
+print(java)
+java.remove('하하')
+print(java)
+
+print(java.isdisjoint(python)) #  중복원소확인 메소드
+print(java.issubset(python)) #java가 python의 부분집합 메소드
+print(python.issuperset(java)) #python이 java의 전체집합 메소드
+
+#함수 : 명령어, 코드, 메소드(method), function
+# 내장함수(이미 있는/모듈,라이브러리), 외장함수(모듈 라이브러리)
+
+import math  #import는 불러들임 
+re=math.gcd(8,2) # geatest common divirsor 최대공약수
+print(re)
+##print(dir(math)) # 각 모듈 불러옴
 
 
+#사용자 지정 함수
+def hi(): # 함수정의, 선언
+    print('안녕')
+
+hi() # 함수호출 call
+for i in range(2):
+    hi()
+
+def hello(name): #매개변수, parameter
+    print(name+'님 어서오세요')
+hello('최예진') #인자, 인수, argument
+print()
+
+
+def hello(name='고객',n=1):
+#매개변수, parameter, 갯수와 순서를 정확히
+#옵셔널 파라미터:기본값을 지정, 에러를 방지, 오른쪽 매개변수부터 채워
+    for i in range(n):
+        print(name+'님 어서오세요')
+hello('최예진',2)
+hello()
+print()
+
+def add1(n1,n2):
+    re = n1+n2
+    return re,'X',1000# 반환, (add1을 종료)
+    print('모든 걸 더하자') #죽은(dead) 코드
+    
+##a=add1(4,77)
+##print(a)
+##print(add1(4,77)) #리턴값을 모여줌
+
+def add2(*n): #가변매개변수, 값들이 튜플로 저장됨
+    tot=0
+    for i in n:
+        tot +=i
+    return tot
+print(add2(1,2,3,4,5))
+
+def person(**p): # 키워드가변매개변수, dict저장됨
+      for i in p:
+            print(f'{i} : {p[i]}')
+person(name='김봄',age=19, sex='여')
+
+#교재 18p
+suchan={'강수찬':95,'김수경':75,'김현희':80,'조영옥':85}
+print('-'*40)
+print('영어성적')
+print('-'*40)
+for i in suchan:
+    print(f'{i} : {suchan[i]}')
+print('-'*40)
+sum=0
+for i in suchan:
+    sum+=suchan[i]
+avg=sum/len(suchan)
+print(f'영어 성적 합계:{sum}, 평균:{avg}')
+print('-'*40)
+
+print()
+
+words={'꽃':'flower','새':'bird','학교':'school','자동차':'car'}
+print('<영어 단어 맞추기 퀴즈>')
+for i in words:
+    in_word=input(f'{i}에 해당하는 영어단어를 입력해 주세요.')
+    if words[i]==in_word:
+        print('정답입니다.')
+    else:
+        print('틀렸습니다.')
+        print(f'정답은 {words[i]}입니다.')
+    print('-'*30)
