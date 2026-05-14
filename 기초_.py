@@ -876,7 +876,7 @@ print(f'영어 성적 합계:{sum}, 평균:{avg}')
 print('-'*40)
 
 print()
-
+'''
 words={'꽃':'flower','새':'bird','학교':'school','자동차':'car'}
 print('<영어 단어 맞추기 퀴즈>')
 for i in words:
@@ -887,3 +887,126 @@ for i in words:
         print('틀렸습니다.')
         print(f'정답은 {words[i]}입니다.')
     print('-'*30)
+'''
+#260514
+#람다함수
+re= lambda a,b:a+b
+print(re(10,20))
+
+numbers=[1,2,3,4,5]
+result=list(map(lambda x: x*3, numbers))
+print(result)
+
+#교재 p.8
+#(1)
+def a(): 
+    print('저는 남산 중학교 1학년 강수찬입니다.')
+for i in range(2):
+    a()
+#(2)
+def intro():
+    print('저는 남산 중학교 1학년 강수찬입니다.')
+for i in range(50):
+    intro()
+#(3)
+def multiple_5(n):
+    if n%5==0:
+        print(f'{n}: 5의 배수입니다.')
+    else :
+        print(f'{n}: 5의 배수가 아닙니다.')
+multiple_5(20)
+multiple_5(23)
+#(4)
+##def even_odd(n):
+##    if n%2==0:
+##        print(f'{n}: 짝수')
+##    else :
+##        print(f'{n}:홀수')
+##n=int(input('양의 정수를 입력하세요:'))
+##even_odd(n)
+#(5)
+def total_amount(start,end):
+    sum=0
+    for i in range(start,end+1):
+        sum=sum+i
+    print(f'{start} ~ {end}의 정수의 합계: {sum}')
+total_amount(1,10)
+total_amount(100,200)
+
+#교재 14p
+#(1)
+##def square(x):
+##    return x *x
+##num=int(input('숫자를 입력하세요:'))
+##print(square(num))
+
+#(2)
+##def sum_multiple3(n):
+##    sum=0
+##    for i in range(1,n+1):
+##        if i%3==0:
+##            sum=sum+i
+##    return sum
+##
+##num=int(input('양의 정수를 입력하세요:'))
+##result=sum_multiple3(num)
+##print(f'1~{num}까지의 3 의 배수의 합:{result}')
+##
+###(3)
+##def tri_arias(w,h):
+##    result= w*h/2
+##    return result
+##width=int(input('밑변의 길이를 입력하세요:'))
+##height=int(input('높이를 입력하세요:'))
+##area= tri_arias(width,height)
+##
+##print(f'-밑변의 길이:{width}')
+##print(f'-삼각형의 높이:{height}')
+##print(f'-삼각형의 넓이:{area}')
+
+#교재 20p
+#(1)
+##def maxTwo(i,j):
+##    if i>j:
+##        return i
+##    else:
+##        return j
+##def maxThree(x,y,z):
+##    return maxTwo(maxTwo(x,y),z)
+##a=int(input('첫 번째 수를 입력하세요.'))
+##b=int(input('두 번째 수를 입력하세요.'))
+##c=int(input('세 번째 수를 입력하세요.'))
+##maxNum=maxThree(a,b,c)
+##print(f'{a},{b},{c} 중 가장 큰 수: {maxNum}')
+
+#(2)
+##def sum_baesu(n1,n2,num):
+##    sum=0
+##    for i in range(n1,n2):
+##        if i%num==0:
+##            sum=sum+i
+##    return sum
+##
+##start=int(input('시작하는 수를 입력하세요:'))
+##end=int(input('마지막 수를 입력하세요:'))
+##baesu=int(input('구하고자 하는 배수를 입력하세요:'))
+##
+##total= sum_baesu(start,end,baesu)
+##print(f'{start}~{end} 사이 {baesu}의 배수의 합계:{total}')
+
+
+#플러스자료
+def computeLCM(x,y):
+    if x>y:
+        big=x
+    else:
+        big=y
+    while True:
+        if big % x==0 and big% y==0:
+            break
+        big += big
+    return big
+num1=int(input('첫 번째 수를 입력하세요:'))
+num2=int(input('두 번째 수를 입력하세요:'))
+LCM= computeLCM(num1,num2)
+print(f'{num1}와 {num2}의 최소공배수는 {LCM}입니다.')
