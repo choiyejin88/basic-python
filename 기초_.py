@@ -996,17 +996,54 @@ total_amount(100,200)
 
 
 #플러스자료
-def computeLCM(x,y):
-    if x>y:
-        big=x
-    else:
-        big=y
-    while True:
-        if big % x==0 and big% y==0:
-            break
-        big += big
-    return big
-num1=int(input('첫 번째 수를 입력하세요:'))
-num2=int(input('두 번째 수를 입력하세요:'))
-LCM= computeLCM(num1,num2)
-print(f'{num1}와 {num2}의 최소공배수는 {LCM}입니다.')
+##def computeLCM(x,y):
+##    if x>y:
+##        big=x
+##    else:
+##        big=y
+##    while True:
+##        if big % x==0 and big% y==0:
+##            break
+##        big += big
+##    return big
+##num1=int(input('첫 번째 수를 입력하세요:'))
+##num2=int(input('두 번째 수를 입력하세요:'))
+##LCM= computeLCM(num1,num2)
+##print(f'{num1}와 {num2}의 최소공배수는 {LCM}입니다.')
+
+#260515
+#평문 plain txt 다루기, csv(comma seperator value)_콤마로 이뤄진 값
+# 규칙적인 패턴으로 값을 매긴것
+#경로 : 절대 경로(처음부터 끝까지) c://폴더//폴더//desktop//file//filename
+#상대 경로: 같은 경로는 파일 이름만 벗어나 상위는'../폴더/파일이름/
+#하위는 폴더이름/파일이름
+#write, read, append
+#파일을 소통하는 길이 stream
+#incoding(인코딩): utf-8, euc-kr, cp949(윈도우) 자연어를 부호화(기계어)
+#decoding(디코딩): 
+file1=open('text_test.txt','w',encoding='utf-8')
+file1.write('12345\n hahahoho \n 값은 뭘까?')
+file1.close()
+
+file1=open('text_test.txt','a',encoding='utf-8')
+file1.write('\n 내용추가')
+file1.close()
+
+file1=open('text_test.txt','r',encoding='utf-8')
+r1=file1.read() #모두 읽기
+print(r1)
+file1.seek(0,0) #커서를 다 읽어서 맨뒤에 있는 것을 0행, 0열 로 
+r2=file1.read(6)
+print(r2)
+r3=file1.readline() #한줄 읽기
+print(r3)
+r4=file1.readlines()
+#커서가 위치한 모두 읽기, 리스트로 반환
+print(r4)
+for i in r4:
+    print(i)
+file1.close()
+
+#with open(): as->alias
+with open('text_test44.txt','w') as f3:
+    f3.write('malllang')
