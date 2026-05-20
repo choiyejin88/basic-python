@@ -1047,3 +1047,29 @@ file1.close()
 #with open(): as->alias
 with open('text_test44.txt','w') as f3:
     f3.write('malllang')
+
+#260520 플러스 수업자료
+
+file=open('basketball.txt','r',encoding='utf-8')
+scores=file.readlines()
+print(scores)
+print('-'*50)
+for  i in scores:
+    player=i.split()
+    i=0
+    sum=0
+    while i < 5:
+        if i ==0:
+            print(player[i])
+        else:
+            sum+=int(player[i])
+        i+=1
+    print(f'시즌 득점합계:{sum}, 게임 득점 평균:{sum/5:.2f}')
+    print('-'*50)
+
+
+
+
+
+
+    

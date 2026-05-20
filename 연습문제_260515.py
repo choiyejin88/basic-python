@@ -66,4 +66,39 @@ if g[:]==g[::-1]:
 s='abcdef'
 print(s[1:4])
 
+#cospro 3급 예제 문제
+#문제1
+##n=int(input())
+##arr=list(map(int,input().split()))
+##sum=0
+##for i in range(1,n,2):
+##    sum=sum+int(arr[i])
+##print(f'{sum}')
 
+
+#문제2
+##counter=0
+##str=input()
+## if 'a' <= str[i] <='z':
+##for i in range(0,len(str)):
+##    if str[i] == str.lower()[i]:
+##        counter+=1
+##print(f'{counter}')
+
+#문제3
+##str1=input()
+##str2=input()
+##print(f'{str1}&{str2}')
+
+#문제4
+
+##str1=input()
+##str2=input()
+##print( str1 if str1 > str2 else str2)
+
+#문제5
+str=input()
+for i in range(0,len(str)):
+    for j in range(0,i+1):
+        print(f'{str[j]}',end="")
+    print(end=" ")
