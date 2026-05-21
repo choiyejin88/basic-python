@@ -1,3 +1,4 @@
+'''
 #Q1
 s='Python'
 print(s[0]+s[-1])
@@ -97,8 +98,63 @@ print(s[1:4])
 ##print( str1 if str1 > str2 else str2)
 
 #문제5
-str=input()
-for i in range(0,len(str)):
-    for j in range(0,i+1):
-        print(f'{str[j]}',end="")
-    print(end=" ")
+##str=input()
+##for i in range(0,len(str)):
+##    for j in range(0,i+1):
+##        print(f'{str[j]}',end="")
+##    print(end=" ")
+
+#문제6
+##k=int(input())
+##n=int(input())
+##for i in range(n):
+##    print(k,end=" ")
+##    k+=3
+
+
+#문제7
+##N=list(map(int,input().split()))
+##cnt=0
+##for i in N:
+##    if i !=7:
+##        cnt+=1
+##    else:
+##        break
+##print(f'{cnt}')
+##    
+        
+## 14 45 50 3 7 11 5 23 9 80
+##11 17 4 10 29 7 8 
+
+
+#문제8
+##n1=int(input())
+##n2=int(input())
+##
+##if n1 < n2 :
+##    print(n1)
+##else:
+##    print(n2)
+
+#문제 9 
+##n=int(input())
+##for i in range(n):
+##    print('-'*i,end="")
+##    print('*'*(n-i),end="")
+
+#문제 10
+##n1=int(input())
+##n2=int(input())
+##n3=n1-n2
+##
+##print(abs(n3))
+'''
+
+
+
+
+    
+
+
+
+
