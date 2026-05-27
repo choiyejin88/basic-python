@@ -67,7 +67,7 @@ if g[:]==g[::-1]:
 s='abcdef'
 print(s[1:4])
 
-#cospro 3급 예제 문제
+#cospro 3급 예제 문제 2
 #문제1
 ##n=int(input())
 ##arr=list(map(int,input().split()))
@@ -150,11 +150,103 @@ print(s[1:4])
 ##print(abs(n3))
 '''
 
+#cospro 3급 예상 문제
+#문제01
+##score=list(map(int,input().split()))
+##total_score=0
+##
+##for subject in score:
+##    total_score+=subject
+##
+##average=total_score/len(score)
+##print('%.2f'%average)
 
+#문제02
+##a=int(input())
+##b=int(input())
+##
+##abs_a=abs(a)
+##abs_b=abs(b)
+##
+##if abs_a > abs_b:
+##    print(f'{a}')
+##elif abs_a < abs_b:
+##    print(f'{b}')
+##else:
+##    print(a)
 
+#문제03
+##base=int(input())
+##height=int(input())
+##
+##triangle=base*height/2
+##rectangle=base*height
+##
+##print(f'{triangle:.1f} {rectangle}')
+##print('%.1f %d'%(triangle,rectangle))
 
-    
+#문제04
+##a=int(input())
+##b=int(input())
+##c=int(input())
+##
+##if c%(a*b) == 0 :
+##    print('true')
+##else:
+##    print('false')
 
+#문제05 ***
+##cards=input().split()
+##
+##priorty='JKQ'
+##winner='A'
+##
+##for i in range(len(priorty)):
+##    if priorty[i]==cards[0]:
+##        for k in range(i+1,len(priorty)):
+##            if priorty[k] == cards[1]:
+##                winner='B'
+##print(winner)
 
+#문제 06
+##arr=list(map(int,input().split()))
+##cnt=0
+##
+##for i in range(len(arr)):
+##    if arr[i]%2 == 0:
+##        cnt+=1
+##result=(len(arr)-cnt)*cnt
+##print(f'{result}')
+
+#문제 07
+##password=input()
+##result=password.lower()
+##print(f'{result}')
+
+#문제08
+##green=list(map(int,input().split()))
+##yellow=list(map(int,input().split()))
+##green_large=max(green)
+##yellow_large=max(yellow)
+##print(f'{green_large} {yellow_large}')
+
+#문제09
+##name=input()
+##cnt=0
+##for i in range(0,len(name)):
+##    if name[i] in 'kK':
+##        cnt+=1
+##print(f'{cnt}')
+
+#문제10
+arr=list(map(int,input().split()))
+n=int(input())
+
+if arr[n-1] < 0:
+    print('-1')
+elif arr[n-1]==0:
+    print('0')
+else:
+    print('1')
 
 
