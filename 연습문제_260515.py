@@ -239,14 +239,99 @@ print(s[1:4])
 ##print(f'{cnt}')
 
 #문제10
-arr=list(map(int,input().split()))
-n=int(input())
+##arr=list(map(int,input().split()))
+##n=int(input())
+##
+##if arr[n-1] < 0:
+##    print('-1')
+##elif arr[n-1]==0:
+##    print('0')
+##else:
+##    print('1')
 
-if arr[n-1] < 0:
-    print('-1')
-elif arr[n-1]==0:
-    print('0')
-else:
-    print('1')
+#cos pro 3급 실전형 연습문제
+
+#문제1. 짝수 개수 세기
+
+def count_even(nums):
+    cnt=0
+    for x in nums:
+        if x%2==0:
+            cnt+=1
+    return cnt
+print(count_even([1,2,4,7]))
+
+#문제2. 문자열에서 숫자 합 
+def sum_digits(s):
+    total=0
+    for ch in s:
+        if ch in '1234r567890':
+            total+=int(ch)
+    return total
+print(sum_digits('a1b20c3'))
+
+#문제3. 최솟값 위치 ***
+def min_index(a):
+    m=a[0]
+    idx=0
+    for i in range(1,len(a)):
+        if a[i] < m:
+            m=a[i]
+            idx=i
+    return idx
+print(min_index([5,3,9,3]))
+
+#문제5. 리스트 필터링
+def only_mul3(nums):
+    return[x for x in nums if x%3==0]
+print(only_mul3([1,3,6,7,9]))
+
+#문제6. 문자열 뒤집기
+def reverse_str(s):
+    return[s[::-1]]
+print(reverse_str('abc'))
+
+#문제8. 구간 합
+def range_sum(a,i,j):
+    return sum(a[i:j+1])
+print(range_sum([10,20,30,40],1,2))
+
+#문제9. 문자열에서 단어개수
+def word_count(s):
+    return len(s.split())
+print(word_count('  hi  there  '))
+
+#문제10. 절댓값 최댓값
+def max_abs(nums):
+    return max(nums,key=abs)
+print(max_abs([-2,5,-10,3]))
+
+#문제11. 디버깅: 평균 계산
+def avg(nums):
+    total=0
+    for i in range(len(nums)):
+        total+=nums[i]
+    return total/len(nums)
+print(avg([2,4,6]))
+
+#문제12. 디버깅:리스트 끝까지
+def total(a):
+    s=0
+    for i in range(0,len(a)):
+        s+=a[i]
+    return s
+print(total([1,2,3]))
+
+#문제13. 디버깅:문자열 자르기
+def drop_first(s):
+    return s[1:]
+print(drop_first('python'))
+
+#문제15.디버깅: 함수가 none 반환
+def sorted_copy(a):
+##    a.sort()
+    b=sorted(a)
+    return b #a
+print(sorted_copy([3,1,2]))
 
 
