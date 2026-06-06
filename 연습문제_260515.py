@@ -121,7 +121,17 @@ print(s[1:4])
 ##    else:
 ##        break
 ##print(f'{cnt}')
-##    
+##
+---------------------**
+N=list(map(int,input().split()))
+cnt=0
+for i in range(len(N)):
+    if N[i] != 7 :
+        cnt+=1
+    else:
+        break
+print('%d'%(cnt))
+
         
 ## 14 45 50 3 7 11 5 23 9 80
 ##11 17 4 10 29 7 8 
@@ -334,4 +344,21 @@ def sorted_copy(a):
     return b #a
 print(sorted_copy([3,1,2]))
 
+#문제 16. 디버깅:조건실수
+def sum_even(nums):
+    s=0
+    for x in nums:
+        if x%2==0:
+            s+=x
+    return s
+print(sum_even([1,2,4,7]))
 
+#문제17.디버깅:문자열-정수더하기
+def add_two(a,b):
+    return int(a)+int(b)
+print(add_two('3','5'))
+
+#문제20.디버깅:공백기준
+def words(s):
+    return s.split()
+print(words('    hi    there  '))
